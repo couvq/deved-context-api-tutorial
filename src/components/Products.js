@@ -1,8 +1,10 @@
 import { Card } from "@mui/material";
 import React from "react";
-import { isTemplateExpression } from "typescript";
+import { useContext } from "react";
+import CartContext from "../CartContext";
 
 const Products = () => {
+  const { addToCart } = useContext(CartContext);
   const products = [
     {
       name: "T-shirt",
@@ -28,6 +30,9 @@ const Products = () => {
         return (
           <Card
             key={index}
+            onClick={() => {
+              addToCart(product.name, product.price);
+            }}
           >
             {product.name}
             {product.price}
