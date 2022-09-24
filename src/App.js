@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Nav from './Nav';
-import Products from './Products';
-import Checkout from './Checkout';
+import Nav from './components/Nav';
+import Products from './components/Products';
+import Checkout from './components/Checkout';
 
 function App() {
   return (
