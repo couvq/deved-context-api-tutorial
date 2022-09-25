@@ -2,6 +2,7 @@ import { Card } from "@mui/material";
 import React from "react";
 import { useContext } from "react";
 import CartContext from "../CartContext";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const { addToCart } = useContext(CartContext);
@@ -26,6 +27,10 @@ const Products = () => {
 
   return (
     <>
+      <Link to={"/checkout"}>
+        <button>Go to Checkout</button>
+      </Link>
+
       {products.map((product, index) => {
         return (
           <Card
